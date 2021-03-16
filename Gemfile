@@ -1,8 +1,20 @@
-# Advanced users only!
-# The following lines are needed if you want to build the page locally
 source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+ruby RUBY_VERSION
 
-# Experts only!
-# Edit the following line for local testing with custom versions of the theme
-# gem 'cover-card', path: "../cover-card"
+gem 'json', '~> 2.3.0'
+gem 'rake', '~> 13.0.1'
+gem 'colorize', '~> 0.8.1'
+gem 'jekyll', '~> 4.0.1'
+
+group :jekyll_plugins do
+  gem 'jekyll-feed', '~> 0.13.0'
+  gem 'jekyll-sitemap', '~> 1.4.0'
+  gem 'jekyll-coffeescript', '~> 2.0.0'
+  gem 'jekyll-gist', '~> 1.5.0'
+  gem 'jekyll-youtube', '~> 1.0.0'
+  gem 'jekyll-tagging', '~> 1.1.0'
+  gem 'jemoji', '~> 0.11.1'
+  gem 'jektify', '~> 1.0.5'
+  gem 'jekyll-email-protect', '~> 1.1.0'
+  gem 'jekyll-paginate-v2', '~> 3.0.0'
+end
