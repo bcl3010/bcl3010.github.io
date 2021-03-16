@@ -1,5 +1,5 @@
-<footer>
+{% include svg-icons.html %}
 
-	<p>Made with <span id="heart">💚</span></p>
-
-</footer>
+{% if site.footer-text %}
+<p>{{ site.footer-text }}</p>
+{% endif %}
