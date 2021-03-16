@@ -1,79 +1,79 @@
-# Cause
+# Cover Card landing page theme
 
-Not for profit themed template for Jekyll. Browse through a [live demo](https://clean-oryx.cloudvent.net/).
-Increase the web presence of a not for profit or cause website with this configurable theme.
+## Quick set-up
 
-![Cause](images/_screenshot.jpg)
+1. [Use this template](https://github.com/epidrome/cover-card/generate)
+2. Edit the `_config.yml` with your online presence accounts and upload a background and an avatar image
+3. Go to `Settings`, scroll down to `Github Pages` and find your new home page link
 
-CloudCannon was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+## Dependencies
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
+This theme is based on [jekyll](https://jekyllrb.com/) and [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme). The above dependencies are natively supported by [Github Pages](https://pages.github.com/), which will build and deploy your site as soon as you make any change to your files. The theme is also based on the icons from [Font Awesome](https://fontawesome.com/). 
 
-## Features
+## Motivation
 
-* Pre-built pages
-* Pre-styled components
-* Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* SEO tags
-* Google Analytics
-* [Donorbox](https://donorbox.org/)
-* [MailChimp](https://mailchimp.com/)
+Create a cover page for your social media profiles, host it for free on Github Pages, and maintain it in minutes, not hours. 
 
-## Setup
+I understand that a jekyll theme without a blog might sound like a self contradiction, but jekyll has also motivated something even more useful than itself: seamless hosting with Github Pages. 
 
-1. Add your site details in `_config.yml`.
-2. Add your Google Analytics to `_config.yml`.
-3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+This theme takes advantage of both jekyll and Github Pages, in order to create something similar to [linktree](https://linktr.ee), [about.me](https://about.me/) and [carrd](https://carrd.co), without the price tag.
 
-## Develop
+In addition to the link at the top, here is one more [demo from my home page](https://github.com/epidrome/home).
 
-Cause was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+This theme is ideal for people or organizations who are busy enjoying their life or business and who want a simple business card for their online presence.
 
-Install the dependencies with [Bundler](http://bundler.io/):
+Please keep this README file because it contains the credits at the end and it might become handy after you have completely forgoten the set-up instructions.
 
-~~~bash
-$ bundle install
-~~~
+## Design rationale
 
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+The design rationale of this theme is to do less than other themes: "Less is more"
 
-~~~bash
-$ bundle exec jekyll serve
-~~~
+The majority (99%) of the availabe jekyll themes offers a blog, but I have never been able to keep blog content (or its technology) updated over time.
 
-## Editing
+Let's be honest with ourselves: How does an (abandoned) blog centered web site look to new visitors if we have not posted since two years ago?
 
-Cause is already optimised for updating pages, company details and footer elements in CloudCannon.
+## Make it yours
 
-## SEO Tag
+[Fork this repository](https://github.com/epidrome/cover-card/fork) and edit the files to your liking: As a first step, you may want to replace the images and edit the `_config.yml` with your online profiles. You can test the result almost in real-time at the `Github Pages` section in the Settings tab (gh-pages branch).
 
-This site uses the [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) plugin. You should at least set a title in front matter on each page. Have a look at the [project page](https://github.com/jekyll/jekyll-seo-tag) for more options.
+### Avatar or Logo
 
-## Google Analytics
+The avatar image should be square and at least 200 pixels. Chances are that you have a selfie somewhere in your media storage. If you are making a page for a business or product, then use a logo.
 
-[Google Analytics](https://www.google.com/analytics/) is a third party website analytics tool. To install:
-1. Add your Google Analytics key to `_config.yml`
-2. Run your site in production `JEKYLL_ENV=production`. This is the default in CloudCannon and GitHub Pages.
+### Background image sets the mood
 
-## Donorbox
+There is no aspect ratio requirement for the background image, but it should be big enough for contemporary (desktop, tablet, phone) computer displays and dark enough in order to work for the white foreground text and icons.
 
-[Donorbox](https://donorbox.org/) is a third party embeddable donation form for websites. To install:
+### Social profiles
 
-1. Set up a campaign on Donorbox
-2. Copy the embed code from the Dashboard screen
-3. Paste it into `donation_embed` in `_config.yml`
+Edit the `_config.yml` file with your social media profiles by adding the respective account name, according to the documentation and comments inside that file. You can delete or comment out the social media that you don't need. Since v04, you can also control the order of your social media accounts. Moreover, you can add new media accounts and choose the icon.
 
-## Mailchimp
+### Domain name
 
-[Mailchimp](https://mailchimp.com/) is a third party embeddable newsletter for websites. To install:
+Github Pages supports free custom domain names, so it is worth buying a domain name and fill it in `Custom domain` field at the settings. If you want to use the theme with you user page (ie. username.github.io), then delete (or rename) your `master branch` and rename your `gh-branch` to `master` [#13](https://github.com/epidrome/cover-card/issues/13)
 
-1. Set up a campaign on Mailchimp
-2. Find the embed code for the sign up form
-3. Copy the `<form>`'s action url
-4. Paste it into `newsletter_action` in `_config.yml`
+### Working example
 
-### Company details
+In addition to the configuration file in this repository, you can also [inspect a modified example of the legacy configuration file](https://github.com/epidrome/home/tree/0f333b28688a7a2e5eb84df768c277a03848d228), which is using the *legacy version* of the theme. Moreover, you can inspect a [custom (icons, links) example of the *current version*](https://github.com/epidrome/home).
 
-* Reused around the site to save multiple editing locations.
-* Set in the *Data* / *Company* section.
+### Updates
+
+Please note that the theme is currently in beta, so some updates at the [master branch](https://github.com/epidrome/cover-card/tree/master) might break your site. Don't panic! 
+
+If you wish to keep your theme frozen and not receive updates, then you can [revert your remote_theme to the last known good configuration](https://github.com/benbalter/jekyll-remote-theme):
+
+> You may also optionally specify a branch, tag, or commit to use by appending an @ and the Git ref (e.g., epidrome/cover-card@v0.3). If you don't specify a Git ref, the master branch will be used.
+
+Please note that currently Github Pages seems to build your site only when you make a local change. This means that the theme might get updated but you will not receive the updated version unless you make a local change in your forked repository.
+
+You can always visit [releases](https://github.com/epidrome/cover-card/releases) for new features and check [issues](https://github.com/epidrome/cover-card/issues) for major bugs.
+
+### Expert options
+
+You can find and locally overide advanced options (e.g., font, image, and icon styles) for this theme in the documentation (readme) at the [master branch](https://github.com/epidrome/cover-card/tree/master).
+
+## Credits
+
+This page is based on the [cover-card jekyll remote theme](https://github.com/epidrome/cover-card/tree/master).
+
+Background photo by Anders Jildén and avatar photo by Ayo Ogunseinde, both on [Unsplash](https://unsplash.com/)

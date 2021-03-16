@@ -1,8 +1,8 @@
+# Advanced users only!
+# The following lines are needed if you want to build the page locally
 source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
 
-gem 'jekyll', '3.7.2'
-
-group :jekyll_plugins do
-  gem 'jekyll-seo-tag', '2.4.0'
-  gem 'jekyll-sitemap', '1.2.0'
-end
+# Experts only!
+# Edit the following line for local testing with custom versions of the theme
+# gem 'cover-card', path: "../cover-card"

@@ -1,77 +1,160 @@
-# ----
-# Site
+# Theme
+remote_theme: 'epidrome/cover-card'
 
-title: Cause Template
-url: https://clean-oryx.cloudvent.net
-baseurl:
-google_analytics_key:
+# Title and tag line
+title: 'My name'
+description: 'I am amazing.'
 
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Jekyll template with example content for a not-for-profit organisation.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Cause Template
-  links:
-    - https://github.com/CloudCannon/cause-jekyll-template
+# Images
+avatar: 'avatar.jpg'
+background: 'background.jpg'
+favicon: 'favicon.ico'
 
-# -----
-# Build
+# Online profiles
+#dribbble: 'mydribbble'
+facebook: 'myfacebook'
+twitter: 'mytwitter'
+#linkedin: 'mylinkedin'
+instagram: 'myinsta'
+#pinterest: 'mypinterest'
+youtube: 'myyoutube'
+github-user: 'mygithub'
+#gitlab-user: ''
+#codepen: ''
+#steam: ''
+#soundcloud: ''
+#lastfm: ''
+#stack-overflow: ''
+#reddit: ''
+#rubygems: ''
+#medium:  ''
+tumblr: 'mytumblr'
+weibo: 'myweibo'
+vk: 'myvk'
+blog_url: 'myblog.blog.com'
+email: 'hello@example.com'
+messenger: 'myfbchat'
 
-timezone: Etc/UTC
+social-links-order: [github-user, facebook, twitter, instagram, tumblr, pinterest, linkedin, youtube, vk, weibo, dribbble, messenger, blog_url, email]
 
-collections:
-  staff_members:
-    _icon: account_circle
-    _hide_content: true
-    _options:
-      image:
-        width: 250
-        height: 250
-
-permalink: pretty
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      _options:
-        content:
-          width: 1880
-          height: 1880
-          uploads_dir: "/images/posts/"
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-
-donation_embed: '<script src="https://donorbox.org/widget.js" type="text/javascript"></script><iframe src="https://donorbox.org/embed/give-sheep-the-vote?hide_donation_meter=true" height="685px" width="100%" style="max-width:425px; min-width:310px" seamless="seamless" id="dbox-form-embed" name="donorbox" frameborder="0" scrolling="no"></iframe>'
-newsletter_action: "//your-mailchimp-action-url.com"
-
+# Advanced settings
 plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-remote-theme
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
+# Yaml manifest of supported social links
+# Requirements:
+# `name`
+#     - plain-text name of the site (e.g. twitter)
+#     - **mandatory**
+# `url-pattern`
+#     - site URL pattern containing a placeholder string (e.g. twitter.com/__USERNAME__)
+#     - placeholder will be replaced by username or value specified in _config.yml (e.g. twitter.com/mytwitter)
+#     - **mandatory**
+# `url-scheme`
+#     - the hardcoded URI/URN url-scheme (e.g. https://)
+#     - can be one of: ['https://', 'http://', 'mailto:']
+#     - defaults to '//'
+#     - **optional**
+# `icon-class`
+#     - the font awesome icon class names
+#     - font-awesome free and supports `fas` (solid) and `fab` (brands) styles
+#     - defaults to `fab` style and uses value of `name` attribute (e.g. fab fa-2x fa-twitter)
+#     - **optional**
+social-links:
+  - name: facebook
+    url-pattern: facebook.com/__USERNAME__
+    icon-class: fab fa-2x fa-facebook-f
 
-# -----------
-# CloudCannon
+  - name: twitter
+    url-pattern: twitter.com/__USERNAME__
 
-_options:
-  header_background_image:
-    width: 1880
-    height: 1880
-  newsletter_background_image:
-    width: 1880
-    height: 1880
+  - name: linkedin
+    url-pattern: linkedin.com/in/__USERNAME__
+
+  - name: google-plus
+    url-pattern: plus.google.com/+__USERNAME__
+
+  - name: vk
+    url-pattern: vk.com/__USERNAME__
+
+  - name: weibo
+    url-pattern: weibo.com/__USERNAME__
+
+  - name: instagram
+    url-pattern: instagram.com/__USERNAME__
+
+  - name: flickr
+    url-pattern: flickr.com/__USERNAME__
+
+  - name: pinterest
+    url-pattern: pinterest.com/__USERNAME__
+
+  - name: github-user
+    url-pattern: github.com/__USERNAME__
+    icon-class: fab fa-2x fa-github
+
+  - name: gitlab-user
+    url-pattern: gitlab.com/__USERNAME__
+    icon-class: fab fa-2x fa-gitlab
+
+  - name: codepen
+    url-pattern: codepen.com/__USERNAME__
+
+  - name: stack-overflow
+    url-pattern: stackoverflow.com/users/__USERNAME__
+
+  - name: reddit
+    url-pattern: reddit.com/user/__USERNAME__
+
+  - name: rubygems
+    url-pattern: rubygems.org/profiles/__USERNAME__
+    icon-class: far fa-2x fa-gem
+
+  - name: steam
+    url-pattern: steamcommunity.com/id/__USERNAME__
+
+  - name: youtube
+    url-pattern: youtube.com/__USERNAME__
+
+  - name: vimeo
+    url-pattern: vimeo.com/__USERNAME__
+
+  - name: soundcloud
+    url-pattern: soundcloud.com/__USERNAME__
+
+  - name: lastfm
+    url-pattern: last.fm/user/__USERNAME__
+
+  - name: medium
+    url-pattern: medium.com/@__USERNAME__
+
+  - name: tumblr
+    url-pattern: __USERNAME__.tumblr.com
+
+  - name: dribbble
+    url-pattern: dribbble.com/__USERNAME__
+
+  - name: keybase
+    url-pattern: keybase.io/__USERNAME__
+
+  - name: messenger
+    url-pattern: m.me/__USERNAME__
+    icon-class: fab fa-2x fa-facebook-messenger
+
+  - name: telegram
+    url-pattern: telegram.me/__USERNAME__
+
+  - name: snapchat
+    url-pattern: snapchat.com/add/__USERNAME__
+
+  - name: quora
+    url-pattern: www.quora.com/profile/__USERNAME__
+
+  - name: blog_url
+    url-pattern: '__USERNAME__'
+    icon-class: fas fa-2x fa-blog
+
+  - name: email
+    url-scheme: 'mailto:'
+    url-pattern: '__USERNAME__'
+    icon-class: far fa-2x fa-envelope-open
